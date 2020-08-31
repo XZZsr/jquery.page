@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>分页效果</title>
+	<link rel="stylesheet" type="text/css" href="css/page.css" />
+</head>
+
+<body>
+	<div>
+		<div class="pagination"></div>
+	</div>
+</body>
+
+<script type="text/javascript" src="js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="js/jquery.page.js"></script>
+<script type="text/javascript">
+	$(".pagination").pageNavigater({
+		pageNo: '69',//代表当前页码，可以自行更改测试效果
+		pageSize: '10', //每页展示多少数据
+		paginationSize: 7,//分页导航栏的长度
+		totalNum: '690', //总共有多少数据
+		callback: function (pageNo) {	//回调函数
+			alert("this is page" + pageNo);
+		}
+	});
+</script>
+
+</html>
